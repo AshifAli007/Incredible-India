@@ -66,6 +66,6 @@ app.use(function(req, res, next){
 
 
        
-app.listen(3000,"127.0.0.1",function(){
+app.listen(process.env.PORT,process.env.IP,function(){
     console.log("yelpcamp Server Has Been Started");
     });
