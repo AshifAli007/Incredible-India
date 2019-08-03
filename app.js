@@ -17,8 +17,8 @@ var     express                 = require("express"),
         
 
         
-mongoose.connect("mongodb://localhost:27017/Yelp_camp",{useNewUrlParser:true});
-//mongodb+srv://ashif:1997*Fira@cluster0-lfttz.mongodb.net/test?retryWrites=true&w=majority
+//mongoose.connect("mongodb://localhost:27017/Yelp_camp",{useNewUrlParser:true});
+mongodb+srv://ashif:1997*Fira@cluster0-lfttz.mongodb.net/test?retryWrites=true&w=majority
 app.use(bodyParser.urlencoded({extended:true}));
 
 //seedsDB();
