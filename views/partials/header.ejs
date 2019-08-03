@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Incredible! India</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Incredible! India</a>
+        </div>
+        <div >
+            <ul class="nav justify-content-end">
+                 <% if(!currentUser){ %>
+                     <li><a href="/login">Login </a></li>
+                     <li><a href="/register">Sign Up </a></li>
+                 <% }else{  %>
+                    <li>Currently Signed In As <%= currentUser.username %>     -</li>
+                     <li><a href="/logout">Logout </a></li>
+                 <% } %>
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+

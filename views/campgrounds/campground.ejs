@@ -1,0 +1,53 @@
+<% include ../partials/header%>
+
+<div class="container">
+<div class="alert alert-danger" role="alert">
+  
+  <%= message %>
+
+</div>
+
+</div>
+
+<div class="container">
+    <header class="jumbotron">
+            <h1>Welcome To Incredible! India</h1>
+            <p>Here You Will Get To Know The Beauty Of India<h4></h4></p>
+            <br>
+            <a class="btn btn-primary btn-large" href="/newcamp">Add New Incredibility</a>
+    </header>
+
+
+
+
+
+<form action="/" post="GET">
+    <button>Back</button>
+</form>
+
+<h3>Some Incredible Places In India</h3>
+
+    <div class="row text-center">
+                    <% campgrounds.forEach(function(camp){ %>
+                <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="thumbnail">
+                         <img  width="250" src="<%= camp.image %>">
+                         <div class="caption">
+                             <h5><%= camp.name%></h5>
+                         </div>
+                         <p>
+                            <a href="/campground/<%= camp._id %> " class="btn btn-primary">More Info</a>
+                         </p>
+                    </div>
+                    
+                      
+               </div>
+            <% });%>
+    </div>
+
+
+
+
+</div>
+
+<% include ../partials/footer%>
