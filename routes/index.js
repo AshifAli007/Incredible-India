@@ -59,7 +59,7 @@ router.get("/logout",function(req,res){
     req.flash("error","log You Out");
     res.redirect("/campground");
 });
-router.get("/alluser",function(req,res){
+router.get("/alluser",isLoggedIn,function(req,res){
     Newuser.find({},function(err,foundusers){
         if(err){
             console.log(err);
