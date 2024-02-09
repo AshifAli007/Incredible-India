@@ -18,8 +18,8 @@ var     express                 = require("express"),
         
 
         
-mongoose.connect("mongodb://localhost:27017/Yelp_camp",{useNewUrlParser:true});
-//mongoose.connect("mongodb+srv://ashif:1997*Fira@cluster0-lfttz.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
+// mongoose.connect("mongodb://localhost:27017/Yelp_camp",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://ashif:1997*Fira@cluster0-lfttz.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 //mongodb+srv://ashif:<password>@cluster0-lfttz.mongodb.net/test?retryWrites=true&w=majority
 //mongodb+srv://ashif:1997*Fira@cluster0-lfttz.mongodb.net/test?retryWrites=true&w=majority
 app.use(bodyParser.urlencoded({extended:true}));
@@ -73,5 +73,5 @@ app.use(function(req, res, next){
 //     console.log("yelpcamp Server Has Been Started");
 //     });
 app.listen(3000,"127.0.0.1",function(){
-    console.log("yelpcamp Server Has Been Started");
+    console.log("yelpcamp Server Has Been Started at 3000");
     });
